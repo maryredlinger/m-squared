@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
+import { NavItem, NavLink, Nav } from 'reactstrap'
+
+
 import Home from './Home'
 import NewBlog from './NewBlog'
 import BlogDetails from "./BlogDetails";
@@ -38,7 +41,11 @@ class App extends React.Component {
     return (
       <Router>
       <React.Fragment>
-        <Link to='/new_blog'>New Blog</Link>
+      <Nav className="nav nav-tabs navbar navbar-expand-lg navbar-dark bg-dark">
+            <NavItem className="active">
+                <NavLink className="navbar-brand " href="/">M<sup>2</sup></NavLink>
+            </NavItem>
+            </Nav>
           <Switch>
             <Route exact path="/" exact component={Home} />
             <Route exact path="/new_blog"  component={NewBlog} />

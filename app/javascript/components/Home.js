@@ -4,6 +4,7 @@ import $ from 'jquery';
 
 import ReactCardFlip from 'react-card-flip';
 
+import { Button } from 'reactstrap'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 import '../styles/home.css'
@@ -58,6 +59,7 @@ class Home extends React.Component {
       <React.Fragment>
         <div className="home">
           <h1>Hello Home</h1>
+
           <div className="polaroid_container">
         {blogs.map((blog, index) => {
           return(
@@ -67,11 +69,11 @@ class Home extends React.Component {
                 flipOnClick={true}
                 flipDirection="horizontal"
                 ref={(r) => this.flippy = r}
-                style={{height: '31vw', width: '22vw'}}
+                style={{height: '28vw', width: '22vw'}}
               >
                 <FrontSide className="polaroid_date"
                 >
-                <div>
+                <div key={blog.id}>
                   <img src="yosemite.JPG"></img>
                   <h1>{blog.location}</h1>
                   <h4>{blog.date}</h4>

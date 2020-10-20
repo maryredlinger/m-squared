@@ -1,0 +1,45 @@
+body {
+	font-family: 'Kelly Slab', cursive;
+}
+
+.flip-container {
+	-webkit-perspective: 1000;
+	width: 400px;
+	cursor: pointer;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+	height: 400px;
+}
+
+.on {
+	transform: rotateY(3.142rad);
+}
+
+.off {
+	transform: rotateY(0rad);
+}
+
+.front, .back {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+	font-size: 2em;
+	line-height: 400px;
+	text-align: center;
+}
+
+.front {
+	background: #2ecc71;
+}
+
+.flip-container .back {
+	background: #3498db;
+	transform: rotateY(3.142rad);
+}

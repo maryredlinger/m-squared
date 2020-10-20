@@ -6,10 +6,13 @@
     "@rails/webpacker": "4.3.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bootstrap": "^4.5.3",
+    "flip": "^1.0.0",
     "jquery": "^3.5.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-card-flip": "^1.0.11",
     "react-dom": "^16.13.1",
+    "react-flippy": "^0.1.5",
     "react-router-dom": "^5.2.0",
     "react_ujs": "^2.6.1"
   },
